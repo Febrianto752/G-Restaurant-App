@@ -45,5 +45,8 @@ module.exports = {
       }, ],
     }),
     new MiniCssExtractPlugin(),
+    new ServiceWorkerWebpackPlugin({
+      entry: path.resolve(__dirname, 'src/scripts/sw.js'),
+    }),
   ],
 };

@@ -6,7 +6,8 @@ import '../styles/main.scss';
 import '../styles/responsive.scss';
 import './components/app-bar';
 import './components/article-item';
-import './components/restaurant-list';
+// import './components/restaurant-list';
+import swRegister from './utils/sw-register';
 
 import img from '../public/images/heros/hero-image_2.jpg';
 import App from './views/app';
@@ -28,6 +29,7 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
 
 const jumbotron = document.querySelector('.jumbotron');
