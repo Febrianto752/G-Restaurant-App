@@ -1,0 +1,62 @@
+$medium: 920px;
+$small: 720px;
+
+@media (max-width: $medium) {
+  nav {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 76px;
+    overflow: hidden;
+    transition: 1s;
+  }
+
+  nav ul {
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: 1s;
+  }
+
+  nav ul li {
+    margin-top: 16px;
+  }
+
+  nav .icon-toggler {
+    display: block;
+    cursor: pointer;
+  }
+
+  .jumbotron {
+    .caption-text {
+      width: 80%;
+    }
+  }
+
+  .card {
+    width: 48%;
+  }
+
+
+}
+
+@media (max-width: $small) {
+  .card {
+    width: 90%;
+  }
+
+  .detail-restaurant {
+    grid-template-columns: 1fr;
+
+    h3 {
+      margin-top: 60px;
+    }
+
+    .detail-image {
+      width: 80%;
+      margin: auto;
+    }
+  }
+}
