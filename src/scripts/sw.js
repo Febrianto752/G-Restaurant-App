@@ -8,7 +8,7 @@ const {
 self.addEventListener('install', (event) => {
   console.log('Installing Service Worker...');
 
-  event.waitUntil(CacheHelper.cachingAppShell([...assets], './'));
+  event.waitUntil(CacheHelper.cachingAppShell([...assets]));
 });
 
 self.addEventListener('activate', (event) => {

@@ -1,4 +1,3 @@
-import CONFIG from '../../globals/config';
 import '../../components/restaurant-detail';
 import '../../components/restaurant-list';
 import '../../components/restaurant-item';
@@ -14,6 +13,7 @@ const createRestaurantDetailsTemplate = (restaurant) => {
   restaurantDetails.restaurant = restaurant;
   return restaurantDetails;
 }
+
 
 export {
   createRestaurantListTemplate,
