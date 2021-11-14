@@ -9,7 +9,7 @@ const CacheHelper = {
   async deleteOldCache() {
     const cacheNames = await caches.keys();
     cacheNames.filter((name) => name !== CONFIG.CACHE_NAME)
-      .map(filteredName => caches.delete(filteredName));
+      .map((filteredName) => caches.delete(filteredName));
   },
 
   async revalidateCache(request) {
@@ -41,7 +41,8 @@ const CacheHelper = {
   async _addCache(request) {
     const cache = await this._openCache();
     cache.add(request);
-  }
-}
+  },
+
+};
 
 export default CacheHelper;

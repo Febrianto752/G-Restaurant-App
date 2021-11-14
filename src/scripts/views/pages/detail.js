@@ -3,6 +3,7 @@ import {
   createRestaurantDetailsTemplate
 } from '../templates/template-creator';
 import UrlParser from '../../routes/url-parser';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
@@ -23,7 +24,12 @@ const Detail = {
     const restaurantDetails = await TheRestaurantsSource.restaurantDetails(url.id);
     wrapper.appendChild(createRestaurantDetailsTemplate(restaurantDetails));
     window.scrollTo(0, 480);
-  }
+
+    LikeButtonInitiator.init({
+      buttonLike: document.querySelector('.btn-favorite'),
+      restaurant: restaurantDetails
+    });
+  },
 }
 
 export default Detail;
