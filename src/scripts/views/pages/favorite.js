@@ -1,7 +1,8 @@
 import FavoriteRestaurantIdb from '../../data/favoriterestaurant-idb';
 import {
-  createRestaurantListTemplate
+  createRestaurantListTemplate,
 } from '../templates/template-creator';
+
 const Favorite = {
   async render() {
     return `
@@ -21,7 +22,7 @@ const Favorite = {
     console.log(restaurants);
     wrapper.appendChild(createRestaurantListTemplate(restaurants));
     window.scrollTo(0, 480);
-  }
-}
+  },
+};
 
 export default Favorite;

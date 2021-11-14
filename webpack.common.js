@@ -12,25 +12,25 @@ module.exports = {
   },
   module: {
     rules: [{
-        test: /\.(scss|css)$/,
-        use: [{
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'sass-loader'
-          },
-        ],
+      test: /\.(scss|css)$/,
+      use: [{
+        loader: MiniCssExtractPlugin.loader,
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]',
-        },
+        loader: 'css-loader',
       },
+      {
+        loader: 'sass-loader',
+      },
+      ],
+    },
+    {
+      test: /\.(png|jpe?g|gif)$/i,
+      loader: 'file-loader',
+      options: {
+        name: '[path][name].[ext]',
+      },
+    },
     ],
   },
   plugins: [
@@ -42,7 +42,7 @@ module.exports = {
       patterns: [{
         from: path.resolve(__dirname, 'src/public/'),
         to: path.resolve(__dirname, 'dist/'),
-      }, ],
+      }],
     }),
     new MiniCssExtractPlugin(),
     new ServiceWorkerWebpackPlugin({

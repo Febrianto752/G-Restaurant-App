@@ -1,7 +1,7 @@
 import TheRestaurantsSource from '../../data/therestaurants-source';
 import UrlParser from '../../routes/url-parser';
 import {
-  createReviewRestaurantTemplate
+  createReviewRestaurantTemplate,
 } from '../templates/template-creator';
 import SubmitButtonInitiator from '../../utils/submit-button-initiator';
 
@@ -29,7 +29,9 @@ const Review = {
       inputName: document.getElementById('name'),
       inputReview: document.getElementById('review'),
     });
-  }
-}
+
+    window.scrollTo(0, 480);
+  },
+};
 
 export default Review;

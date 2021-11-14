@@ -4,8 +4,6 @@ class AppBar extends HTMLElement {
   }
 
   render() {
-    // this.setAttribute('tabindex', '-1');
-    // this.setAttribute('class', 'top');
     this.innerHTML = `
     <header tabindex="-1" class="top">
         <nav>
@@ -20,7 +18,7 @@ class AppBar extends HTMLElement {
             </ul>
         </nav>
     </header>    
-    `
+    `;
   }
 }
 

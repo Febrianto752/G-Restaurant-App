@@ -16,7 +16,6 @@ class TheRestaurantsSource {
       console.log(error);
       return false;
     }
-
   }
 
   static async reviewRestaurant(customerReview) {
@@ -25,7 +24,7 @@ class TheRestaurantsSource {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(customerReview)
+      body: JSON.stringify(customerReview),
     });
     return response.json();
   }

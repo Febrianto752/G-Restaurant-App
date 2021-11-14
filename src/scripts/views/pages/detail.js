@@ -1,6 +1,6 @@
 import TheRestaurantsSource from '../../data/therestaurants-source';
 import {
-  createRestaurantDetailsTemplate
+  createRestaurantDetailsTemplate,
 } from '../templates/template-creator';
 import UrlParser from '../../routes/url-parser';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
@@ -27,9 +27,9 @@ const Detail = {
 
     LikeButtonInitiator.init({
       buttonLike: document.querySelector('.btn-favorite'),
-      restaurant: restaurantDetails
+      restaurant: restaurantDetails,
     });
   },
-}
+};
 
 export default Detail;

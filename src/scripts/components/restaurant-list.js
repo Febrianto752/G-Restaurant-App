@@ -1,4 +1,5 @@
 import './restaurant-item';
+
 class RestaurantList extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -10,7 +11,6 @@ class RestaurantList extends HTMLElement {
   }
 
   render() {
-
     if (!this._restaurants) {
       this.renderError('List Restaurant not Found!');
     } else if (this._restaurants.length === 0) {
@@ -19,8 +19,8 @@ class RestaurantList extends HTMLElement {
       this.setAttribute('class', 'list-restaurant');
       this.setAttribute('tabindex', '-1');
 
-      this.innerHTML = ``;
-      this._restaurants.forEach(restaurant => {
+      this.innerHTML = '';
+      this._restaurants.forEach((restaurant) => {
         const restaurantItemElement = document.createElement('restaurant-item');
         restaurantItemElement.restaurant = restaurant;
         this.appendChild(restaurantItemElement);

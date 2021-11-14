@@ -21,7 +21,7 @@ class ArticleItem extends HTMLElement {
                 </blockquote>
             </article>
     `;
-  };
+  }
 }
 
 customElements.define('article-item', ArticleItem);

@@ -1,13 +1,12 @@
 import CONFIG from '../globals/config';
-class RestaurantItem extends HTMLElement {
 
+class RestaurantItem extends HTMLElement {
   set restaurant(restaurant) {
     this._restaurant = restaurant;
     this.render();
   }
 
   render() {
-
     this.setAttribute('class', 'card');
     this.setAttribute('aria-label', 'restaurant');
     this.setAttribute('tabindex', '0');
@@ -23,7 +22,7 @@ class RestaurantItem extends HTMLElement {
         <h3><a href="#/detail/${this._restaurant.id}">${this._restaurant.name}</a></h3>
         <p class="description" tabindex="0">${this._restaurant.description}</p>
     </div>
-    `
+    `;
   }
 }
 

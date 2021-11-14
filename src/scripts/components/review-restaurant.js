@@ -1,11 +1,11 @@
 class ReviewRestaurant extends HTMLElement {
   set restaurant({
     id,
-    name
+    name,
   }) {
     this._restaurant = {
       id,
-      name
+      name,
     };
     this.render();
   }
@@ -28,8 +28,7 @@ class ReviewRestaurant extends HTMLElement {
       <button type="button" id="submit">Submit</button>
     </form>   
     `;
-  };
-
+  }
 }
 
 customElements.define('review-restaurant', ReviewRestaurant);

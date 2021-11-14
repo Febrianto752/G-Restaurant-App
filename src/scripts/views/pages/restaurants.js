@@ -1,7 +1,8 @@
 import TheRestaurantsSource from '../../data/therestaurants-source';
 import {
-  createRestaurantListTemplate
+  createRestaurantListTemplate,
 } from '../templates/template-creator';
+
 const Restaurants = {
   async render() {
     return `
@@ -19,8 +20,7 @@ const Restaurants = {
     const restaurants = await TheRestaurantsSource.restaurantList();
     const wrapper = document.querySelector('.wrapper');
     wrapper.appendChild(createRestaurantListTemplate(restaurants));
-
-  }
-}
+  },
+};
 
 export default Restaurants;

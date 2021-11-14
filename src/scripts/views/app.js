@@ -6,7 +6,7 @@ class App {
   constructor({
     button,
     drawer,
-    content
+    content,
   }) {
     this._button = button;
     this._drawer = drawer;
@@ -19,7 +19,7 @@ class App {
     DrawerInitiator.init({
       button: this._button,
       drawer: this._drawer,
-      content: this._content
+      content: this._content,
     });
   }
 

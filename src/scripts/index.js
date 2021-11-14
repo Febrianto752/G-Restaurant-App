@@ -1,37 +1,23 @@
 import 'regenerator-runtime'; /* for async await transpile */
-import "@fortawesome/fontawesome-free/js/brands.js";
-import "@fortawesome/fontawesome-free/js/solid.js";
-import "@fortawesome/fontawesome-free/js/fontawesome.min.js";
+import '@fortawesome/fontawesome-free/js/brands';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/fontawesome.min';
 import '../styles/main.scss';
 import '../styles/responsive.scss';
 import './components/app-bar';
 import './components/article-item';
-// import './components/restaurant-list';
 import swRegister from './utils/sw-register';
 
 import img from '../public/images/heros/hero-image_2.jpg';
 import App from './views/app';
 
-// const data = {
-//   "id": "fnfn8mytkpmkfw1e867",
-//   "name": "riyan",
-//   "review": "cocok untuk bersantai"
-// };
-
-// fetch('https://restaurant-api.dicoding.dev/review', {
-//   method: 'POST', // or 'PUT'
-//   headers: {
-//     'Content-Type': 'application/json',
-//   },
-//   body: JSON.stringify(data),
-// }).then(response => response.json()).then(responseJson => console.log(responseJson));
 const loadingElement = document.querySelector('.loading');
 
 const app = new App({
   button: document.getElementsByClassName('icon-toggler')[0],
   drawer: {
     nav: document.getElementsByTagName('nav')[0],
-    navbarNav: document.getElementsByClassName('navbar-nav')[0]
+    navbarNav: document.getElementsByClassName('navbar-nav')[0],
   },
   content: document.getElementById('main'),
 });
@@ -46,7 +32,6 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     loadingElement.style.display = 'none';
   }, 100);
-
 });
 
 const jumbotron = document.querySelector('.jumbotron');

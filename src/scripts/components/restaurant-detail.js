@@ -1,8 +1,4 @@
 class RestaurantDetail extends HTMLElement {
-  // connectedCallback() {
-  //   this.render();
-  // }
-
   set restaurant(restaurant) {
     this._restaurant = restaurant;
     this.render();
@@ -14,16 +10,16 @@ class RestaurantDetail extends HTMLElement {
     } else {
       this.setAttribute('class', 'detail-restaurant');
 
-      const customerReviews = this._restaurant.customerReviews;
+      const {
+        customerReviews,
+      } = this._restaurant;
       const {
         foods,
-        drinks
+        drinks,
       } = this._restaurant.menus;
       let reviewsStringElement = '';
-      let foodsMenus = foods.map(food => food.name);
-      let drinksMenus = drinks.map(drink => drink.name);
-
-
+      const foodsMenus = foods.map((food) => food.name);
+      const drinksMenus = drinks.map((drink) => drink.name);
 
       customerReviews.forEach((reviewer) => {
         reviewsStringElement += `
@@ -33,7 +29,7 @@ class RestaurantDetail extends HTMLElement {
           <p class="date">${reviewer.date}</p>
         </div>
         `;
-      })
+      });
 
       this.innerHTML = `
       <button class="btn-close"><a href="/"><i class="fas fa-times"></i></a></button>
@@ -44,13 +40,13 @@ class RestaurantDetail extends HTMLElement {
         <button class="btn-add-review"><a href="#/review/${this._restaurant.id}">Add Review</a></button>
       </div>
       <div class="info">
-        <h3>Restaurant : ${this._restaurant.name}</h3>
-        <p><b>City</b> : ${this._restaurant.city}</p>
-        <p><b>Address</b> : ${this._restaurant.address}</p>
-        <p><b>Foods Menus</b> : ${foodsMenus.join(', ')}</p>
-        <p><b>Drinks Menus</b> : ${drinksMenus.join(', ')}</p>
-        <p><b>Description</b> : ${this._restaurant.description}</p>
-        <h4>Reviews </h4>
+        <h3 tabindex="0">Restaurant : ${this._restaurant.name}</h3>
+        <p tabindex="0"><b>City</b> : ${this._restaurant.city}</p>
+        <p tabindex="0"><b>Address</b> : ${this._restaurant.address}</p>
+        <p tabindex="0"><b>Foods Menus</b> : ${foodsMenus.join(', ')}</p>
+        <p tabindex="0"><b>Drinks Menus</b> : ${drinksMenus.join(', ')}</p>
+        <p tabindex="0"><b>Description</b> : ${this._restaurant.description}</p>
+        <h4 tabindex="0">Reviews </h4>
         <div class="reviews">
   
           ${reviewsStringElement}
@@ -59,8 +55,6 @@ class RestaurantDetail extends HTMLElement {
       </div>
       `;
     }
-
-
   }
 
   renderError(message) {

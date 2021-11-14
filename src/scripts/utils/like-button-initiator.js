@@ -3,7 +3,7 @@ import FavoriteRestaurantIdb from '../data/favoriterestaurant-idb';
 const LikeButtonInitiator = {
   async init({
     buttonLike,
-    restaurant
+    restaurant,
   }) {
     this._buttonLike = buttonLike;
     this._restaurant = restaurant;
@@ -13,7 +13,7 @@ const LikeButtonInitiator = {
 
   async _renderButton() {
     const {
-      id
+      id,
     } = this._restaurant;
 
     if (await this._isRestaurantExist(id)) {
@@ -33,7 +33,7 @@ const LikeButtonInitiator = {
     this._buttonLike.addEventListener('click', async () => {
       await FavoriteRestaurantIdb.putRestaurant(this._restaurant);
       this._renderButton();
-    })
+    });
   },
 
   _renderLiked(id) {
@@ -42,7 +42,7 @@ const LikeButtonInitiator = {
       await FavoriteRestaurantIdb.deleteRestaurant(id);
       this._renderButton();
     });
-  }
-}
+  },
+};
 
 export default LikeButtonInitiator;
