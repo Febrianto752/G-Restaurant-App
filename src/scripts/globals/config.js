@@ -1,5 +1,5 @@
 const CONFIG = {
-  BASE_URL_APP: 'http://localhost:8080',
+  BASE_URL_APP: '/',
   BASE_URL_API: 'https://restaurant-api.dicoding.dev',
   BASE_IMAGE_URL: (size) => `https://restaurant-api.dicoding.dev/images/${size}`,
   CACHE_NAME: new Date().toISOString(),

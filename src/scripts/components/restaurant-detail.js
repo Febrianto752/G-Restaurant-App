@@ -45,11 +45,11 @@ class RestaurantDetail extends HTMLElement {
       </div>
       <div class="info">
         <h3>Restaurant : ${this._restaurant.name}</h3>
-        <p>city : ${this._restaurant.city}</p>
-        <p>Address : ${this._restaurant.address}</p>
-        <p>Foods Menus : ${foodsMenus.join(', ')}</p>
-        <p>Drinks Menus : ${drinksMenus.join(', ')}</p>
-        <p>description : ${this._restaurant.description}</p>
+        <p><b>City</b> : ${this._restaurant.city}</p>
+        <p><b>Address</b> : ${this._restaurant.address}</p>
+        <p><b>Foods Menus</b> : ${foodsMenus.join(', ')}</p>
+        <p><b>Drinks Menus</b> : ${drinksMenus.join(', ')}</p>
+        <p><b>Description</b> : ${this._restaurant.description}</p>
         <h4>Reviews </h4>
         <div class="reviews">
   

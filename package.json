@@ -6,7 +6,9 @@
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "test": "karma start"
+    "test": "karma start",
+    "lint": "eslint ./",
+    "fix": "eslint ./ --fix"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +19,9 @@
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^6.0.2",
     "css-loader": "^3.6.0",
-    "eslint": "^8.1.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.3.0",
     "jasmine-ajax": "^4.0.0",
