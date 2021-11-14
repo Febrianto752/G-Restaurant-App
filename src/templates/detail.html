@@ -8,6 +8,9 @@
     <meta name="description"
       content="Indonesia has restaurants with many culinary flavors that have good quality, so it would be better to publish these restaurants through a website that is easily accessible to the world.">
     <link rel="icon" href="favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#34E0A1" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
 
     <title>G-Restaurant Apps</title>
   </head>
@@ -40,13 +43,14 @@
         <h2 tabindex="0">Explore Restaurants</h2>
       </header>
       <div class="wrapper" tabindex="-1">
-        <!-- <div class="list-restaurant" tabindex="-1"> -->
+        <!-- <div class="list-restaurant" tabindex="-1"></div> -->
         <div class="detail-restaurant">
           <button class="btn-close"><i class="fas fa-times"></i></button>
 
           <div class="detail-image">
             <img src="favicon.png" alt="restaurant image">
             <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+            <button class="btn-add-review"><a href="#/review/id">Add Review</a></button>
           </div>
           <div class="info">
             <h3>Restaurant : Melting Pot</h3>
@@ -70,7 +74,7 @@
           </div>
 
         </div>
-        <!-- </div> -->
+        <!-- <restaurant-list></restaurant-list> -->
       </div>
 
       <!-- <article class="material" tabindex="0">

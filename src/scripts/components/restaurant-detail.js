@@ -38,6 +38,7 @@ class RestaurantDetail extends HTMLElement {
     <div class="detail-image">
       <img src="https://restaurant-api.dicoding.dev/images/medium/${this._restaurant.pictureId}" alt="restaurant image">
       <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+      <button class="btn-add-review"><a href="#/review/${this._restaurant.id}">Add Review</a></button>
     </div>
     <div class="info">
       <h3>Restaurant : ${this._restaurant.name}</h3>

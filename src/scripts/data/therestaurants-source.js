@@ -12,6 +12,17 @@ class TheRestaurantsSource {
     const responseJson = await response.json();
     return responseJson.restaurant;
   }
+
+  static async reviewRestaurant(customerReview) {
+    const response = await fetch(API_ENDPOINT.REVIEW, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(customerReview)
+    });
+    return response.json();
+  }
 }
 
 export default TheRestaurantsSource;
