@@ -25,6 +25,7 @@ import App from './views/app';
 //   },
 //   body: JSON.stringify(data),
 // }).then(response => response.json()).then(responseJson => console.log(responseJson));
+const loadingElement = document.querySelector('.loading');
 
 const app = new App({
   button: document.getElementsByClassName('icon-toggler')[0],
@@ -42,13 +43,11 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
+  setTimeout(() => {
+    loadingElement.style.display = 'none';
+  }, 100);
+
 });
 
 const jumbotron = document.querySelector('.jumbotron');
 jumbotron.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img})`;
-
-
-const perfData = window.performance.domContentLoadedEventStart;
-// const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-// const renderTime = perfData.navigationStart;
-console.log('Page load time is ' + perfData);

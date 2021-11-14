@@ -13,6 +13,8 @@ class RestaurantList extends HTMLElement {
 
     if (!this._restaurants) {
       this.renderError('List Restaurant not Found!');
+    } else if (this._restaurants.length === 0) {
+      this.renderError('List Restaurant Favorite is Empty, Please Add Your Favorite Restaurant');
     } else {
       this.setAttribute('class', 'list-restaurant');
       this.setAttribute('tabindex', '-1');

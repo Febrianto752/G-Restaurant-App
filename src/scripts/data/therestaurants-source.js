@@ -8,9 +8,15 @@ class TheRestaurantsSource {
   }
 
   static async restaurantDetails(id) {
-    const response = await fetch(API_ENDPOINT.DETAIL(id));
-    const responseJson = await response.json();
-    return responseJson.restaurant;
+    try {
+      const response = await fetch(API_ENDPOINT.DETAIL(id));
+      const responseJson = await response.json();
+      return responseJson.restaurant;
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+
   }
 
   static async reviewRestaurant(customerReview) {

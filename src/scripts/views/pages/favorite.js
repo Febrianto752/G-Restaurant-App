@@ -18,7 +18,9 @@ const Favorite = {
   async afterRender() {
     const wrapper = document.querySelector('.wrapper');
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
+    console.log(restaurants);
     wrapper.appendChild(createRestaurantListTemplate(restaurants));
+    window.scrollTo(0, 480);
   }
 }
 
