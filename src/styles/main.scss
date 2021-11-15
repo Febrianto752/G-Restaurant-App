@@ -61,6 +61,8 @@ nav {
             text-decoration: none;
             color: colors.$primary-color;
             cursor: pointer;
+            display: block;
+            height: 44px;
         }
     }
 
@@ -141,6 +143,7 @@ main {
     height: fit-content;
     background-color: white;
     padding: 20px;
+    // padding-top: 0;
 
 
     header {
@@ -154,11 +157,13 @@ main {
 .wrapper {
     width: 100%;
     padding: 8px;
+    padding-top: 8px;
     border-radius: 4px;
     box-shadow: 0 1px 9px rgba($color: #000000, $alpha: .2);
     height: 80%;
     background-color: colors.$secondary-color;
     position: relative;
+
 }
 
 .list-restaurant {
@@ -168,6 +173,7 @@ main {
     justify-content: space-around;
     align-content: space-around;
     min-height: 100vh;
+    padding-top: 8px;
 }
 
 .card {
@@ -215,9 +221,14 @@ main {
         margin-bottom: 16px;
 
         a {
+            display: block;
             text-decoration: none;
             color: black;
             cursor: pointer;
+            height: 44px;
+            width: fit-content;
+            line-height: 44px;
+            padding-right: 10px;
         }
     }
 
@@ -256,6 +267,7 @@ main {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+    padding-top: 8px;
 
 
 
@@ -288,6 +300,10 @@ main {
 
     .info {
         padding: 10px 20px;
+
+        h3 {
+            max-width: 360px;
+        }
 
         p,
         h4 {
@@ -323,22 +339,25 @@ main {
     .btn-add-review {
         display: block;
         border: 0;
-        padding: 12px 16px;
+        // padding: 16px 20px;
         cursor: pointer;
         background-color: colors.$primary-color;
         margin: 10px auto;
         border-radius: 6px;
 
+        a {
+            padding: 16px 20px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
 
 
         &:hover {
             background-color: green;
 
             a {
-                display: block;
-                width: 100%;
-                height: 100%;
-                text-align: center;
                 color: white;
             }
 
@@ -368,6 +387,7 @@ main {
         width: 100%;
         height: 100%;
         display: block;
+        padding: 16px 20px;
         text-align: center;
     }
 }
@@ -381,6 +401,7 @@ main {
     // position: relative;
     // background-color: white;
     // border: 1px solid black;
+    padding-top: 8px;
     display: block;
 
     h3 {
@@ -389,7 +410,7 @@ main {
 
     #submit {
         border: 0;
-        padding: 12px 16px;
+        padding: 15px 20px;
         background-color: colors.$primary-color;
 
         border-radius: 4px;
@@ -421,7 +442,7 @@ main {
     input {
         width: 100%;
         border: .5px solid gray;
-        padding: 8px;
+        padding: 14px 8px;
         margin-bottom: 10px;
         border-radius: 6px;
         font-size: 18px;

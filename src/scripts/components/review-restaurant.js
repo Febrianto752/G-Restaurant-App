@@ -18,11 +18,11 @@ class ReviewRestaurant extends HTMLElement {
       <h3 tabindex="0">Review : ${this._restaurant.name}</h3>
       <div class="form-control">
           <label for="name">Your Name</label>
-          <input type="text" name="name" id="name" placeholder="your name ...">
+          <input type="text" name="name" id="name" placeholder="your name ..." required>
       </div>
       <div class="form-textarea">
           <label for="review">Comment</label>
-          <textarea name="review" id="review" cols="30" rows="4" maxlength="100" placeholder="your comment about restaurant"></textarea>
+          <textarea name="review" id="review" cols="30" rows="4" maxlength="100" placeholder="your comment about restaurant" required></textarea>
       </div>
 
       <button type="button" id="submit">Submit</button>
