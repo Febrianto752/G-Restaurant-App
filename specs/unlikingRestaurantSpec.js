@@ -32,7 +32,7 @@ describe('Unliking A Restaurant', () => {
   });
 
   it('should display unfavorite widget when the restaurant has been liked', async () => {
-    expect(document.querySelector('.btn-favorite').style.color == 'red').toBeTruthy();
+    expect(document.querySelector('.btn-favorite').style.color === 'red').toBeTruthy();
   });
 
   it('should be able to remove favorited restaurant from the list', async () => {
