@@ -18,6 +18,7 @@
         "no-restricted-globals": "off",
         "no-prototype-builtins": "off",
         "consistent-return": "off",
-        "no-undef": "off"
+        "no-undef": "off",
+        "import/no-extraneous-dependencies": "off"
     }
 }

@@ -13,7 +13,7 @@ class RestaurantItem extends HTMLElement {
 
     this.innerHTML = `
     <div class="card-header">
-        <img src="${CONFIG.BASE_IMAGE_URL('small')}/${this._restaurant.pictureId}" alt="${this._restaurant.name} image">
+        <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL('small')}/${this._restaurant.pictureId}" alt="${this._restaurant.name}">
         <span class="tag" tabindex="0">${this._restaurant.city}</span>
     </div>
     <div class="card-body">

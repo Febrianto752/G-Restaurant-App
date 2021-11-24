@@ -1,8 +1,12 @@
 const serviceWorkerOption = {
   assets: [
-    '/src/public/images/heros/hero-image_2.jpg',
-    '/main.css',
-    '/bundle.js',
+    '/defaultVendors~main~197c5f8d.bundle.js',
+    '/defaultVendors~main~1d28ebf6.bundle.js',
+    '/defaultVendors~main~253ae210.bundle.js',
+    '/defaultVendors~main~690b702c.bundle.js',
+    '/main~25018730.bundle.js',
+    '/main~29d6ecf2.css',
+    '/main~29d6ecf2.bundle.js',
     '/favicon.png',
     '/loading.gif',
     '/manifest.json',
