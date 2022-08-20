@@ -4,5 +4,3 @@ G-Restaurant adalah aplikasi berbasis web untuk membantu user dalam melihat daft
 ## Teknologi yang digunakan : 
   - HTML, SCSS, Javascript, Node Js, Webpack 4
 
-
-Overview Project : https://stupefied-nightingale-6d911e.netlify.app
